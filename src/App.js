@@ -1,7 +1,14 @@
+import React, { Fragment } from 'react';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <h1>Shopping Cart</h1>
+    <Fragment>
+      <Header />
+
+      <Footer />
+    </Fragment>
   );
 }
 
