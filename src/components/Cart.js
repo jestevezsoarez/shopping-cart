@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import Product from './Product';
 
-const Carrito = ({cart}) => {
+const Cart = ({cart}) => {
     return ( 
         <Fragment>
             <h2>Shopping Cart</h2>
             {cart.map(product => (
                 <Product 
                     key={product.id}
+                    product={product}
                 />
             ))}        
         </Fragment>
@@ -15,4 +16,4 @@ const Carrito = ({cart}) => {
      );
 }
  
-export default Carrito;
+export default Cart;

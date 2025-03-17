@@ -29,7 +29,10 @@ function App() {
           {products.map((product) => (
             <Product 
               key={product.id} 
-              product={product} 
+              product={product}
+              products={products}
+              cart={cart}
+              setCart={setCart}
             />
           ))}
 
