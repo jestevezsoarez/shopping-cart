@@ -8,7 +8,9 @@ const Product = ({product}) => {
         <div>
             <h3>{name}</h3>
             <p>$ {price}</p>
-            <button>Buy</button>
+            <button
+                className='button-primary'
+            >Buy</button>
         </div>
      );
 }
