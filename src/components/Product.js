@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({product, products, cart, setCart}) => {
+const Product = ({ product, products, cart, setCart }) => {
 
     const { id, name, price } = product;
 
@@ -12,16 +12,31 @@ const Product = ({product, products, cart, setCart}) => {
         ]);
     }
 
-    return ( 
+    const remove = id => {
+        const newProducts = cart.filter(product => product.id !== id);
+        setCart(newProducts);
+    }
+
+    return (
         <div>
             <h3>{name}</h3>
             <p>$ {price}</p>
-            <button
-                className='button-primary'
-                onClick={() => buy(id)}
-            >Buy</button>
+            { products ? 
+                (
+                    <button
+                        className='button-primary'
+                        onClick={() => buy(id)}
+                    >Buy</button>
+                ) : 
+                (
+                    <button
+                        className='button secondary'
+                        onClick={() => remove(id)}
+                    >Remove</button>
+                ) 
+            }
         </div>
-     );
+    );
 }
- 
+
 export default Product;

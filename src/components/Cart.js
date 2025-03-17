@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Product from './Product';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, setCart}) => {
     return ( 
         <Fragment>
             <h2>Shopping Cart</h2>
@@ -9,6 +9,8 @@ const Cart = ({cart}) => {
                 <Product 
                     key={product.id}
                     product={product}
+                    cart={cart}
+                    setCart={setCart}
                 />
             ))}        
         </Fragment>

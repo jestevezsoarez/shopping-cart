@@ -43,6 +43,7 @@ function App() {
         <div className="four columns">
           <Cart 
             cart={cart}
+            setCart={setCart}
           />
         </div>
       </div>
