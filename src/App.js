@@ -17,6 +17,8 @@ function App() {
     { id: 6, name: "Watermelon", price: 5 },
   ]);
 
+  const [cart, setCart] = useState([]);
+
   return (
     <div className="container">
       <div className="row">
@@ -25,13 +27,20 @@ function App() {
 
           <h2>Products List</h2>
           {products.map((product) => (
-            <Product key={product.id} product={product} />
+            <Product 
+              key={product.id} 
+              product={product} 
+            />
           ))}
 
-          <Footer date={date} />
+          <Footer 
+            date={date} 
+          />
         </div>
         <div className="four columns">
-          <Cart />
+          <Cart 
+            cart={cart}
+          />
         </div>
       </div>
     </div>
